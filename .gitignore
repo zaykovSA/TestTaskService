@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/TasksService/App_Data
+/TasksService/obj/Debug
+/TasksService.sln.DotSettings.user
