@@ -61,11 +61,11 @@ namespace TasksService.Controllers
                     var processTask = dbContext.ProcessTasks
                         .Where(t => t.TaskId == taskId)
                         .FirstOrDefault();
-                    processTask.StatusChangeDate = DateTime.Now;
+                    processTask.StatusChangeDate = DateTime.UtcNow;
                     processTask.Status = "running";
                     dbContext.SaveChanges();
                     Task.Delay(new TimeSpan(0, 2, 0)).Wait();
-                    processTask.StatusChangeDate = DateTime.Now;
+                    processTask.StatusChangeDate = DateTime.UtcNow;
                     processTask.Status = "finished";
                     dbContext.SaveChanges();
                 }  
